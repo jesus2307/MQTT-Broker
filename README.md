@@ -5,5 +5,5 @@
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/diagram.png" alt="diagram">
+<img src="http://josejuansanchez.org/iot-dashboard/images/diagram.png" alt="diagram">
 </div>
