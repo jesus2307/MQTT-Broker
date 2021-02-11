@@ -61,3 +61,47 @@
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_archivo_de_configuración_mosquitto_conf">4.2. Archivo de configuración <code>mosquitto.conf</code></h3>
+<div class="paragraph">
+<p>Este archivo estará almacenado en el directorio <code>./mosquitto/mosquitto.conf</code> de nuestra máquina local. Como vamos a utilizar la <strong>versión 2</strong> del broker MQTT <a href="https://hub.docker.com/_/eclipse-mosquitto">eclipse-mosquitto</a> vamos a necesitar crear un archivo de configuración llamado <code>mosquitto.conf</code> que incluya las siguientes opciones de configuración.</p>
+</div>
+<div class="paragraph">
+<p><strong><code>mosquitto.conf</code></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>listener 1883 <i class="conum" data-value="1"></i><b>(1)</b>
+allow_anonymous true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>En esta línea estamos configurando el <em>listener</em> para que acepte conexiones desde cualquiera de sus interfaces de red, es equivalente a poner <code>listener 1883 0.0.0.0</code>. Si sólo quisiéramos recibir conexiones por una interfaz de red específica se podría configurar aquí de forma manual.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A partir de la <strong>versión 2</strong> es necesario indicar un método de autenticación para el <em>listener</em>. Con esta configuración vamos a permitir conexiones desde cualquier cliente. Aquí sería posible definir un método de autenticación basado en contraseña para restringir el acceso al broker.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="https://mosquitto.org/documentation/migrating-to-2-0/">En la documentación oficial</a>, puede consultar los cambios que hay que tener en cuenta en el archivo de configuración para migrar de la versión 1.x a la 2.0.</p>
+</div>
+<div class="paragraph">
+<p>También puede encontrar más información sobre todas las opciones de configuración posibles en la <a href="https://mosquitto.org/man/mosquitto-conf-5.html">documentación oficial</a>.</p>
+</div>
+<div class="paragraph">
+<p>En este punto, el contenido de nuestro directorio de trabajo debe tener los siguientes archivos.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>.
+├── docker-compose.yml
+├── mosquitto
+    └── mosquitto.conf</code></pre>
+</div>
+</div>
+</div>
