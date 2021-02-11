@@ -96,4 +96,5 @@ allow_anonymous true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 <div class="paragraph">
 <p>En este punto, el contenido de nuestro directorio de trabajo debe tener los siguientes archivos.</p>
 </div>
+    
 # captura 1
