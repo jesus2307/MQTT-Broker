@@ -169,3 +169,67 @@ pub \ <i class="conum" data-value="2"></i><b>(2)</b>
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_cliente_mqtt_para_suscribirse_a_un_topic_subscribe">4.4. Cliente MQTT para suscribirse a un topic (<em>subscribe</em>)</h3>
+<div class="paragraph">
+<p>Podemos hacer uso de un cliente MQTT para suscribirnos a los mensajes que se publican en un topic específico del broker MQTT.</p>
+</div>
+<div class="paragraph">
+<p>Esta comprobación deberíamos realizarla antes de empezar a trabajar directamente con los sensores sobre el broker MQTT. Una vez que hayamos comprobado que podemos publicar y suscribirnos a los mensajes del broker con este cliente, ya podríamos realizar el siguiente paso para publicar mensajes con los sensores y recibirlos con el agente de <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ejemplo:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker run --init -it --rm efrecon/mqtt-client sub -h 18.206.253.84 -t "iescelia/#"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Explicación de los parámetros utilizados:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker run --init -it --rm efrecon/mqtt-client \ <i class="conum" data-value="1"></i><b>(1)</b>
+sub \ <i class="conum" data-value="2"></i><b>(2)</b>
+-h test.mosquitto.org \ <i class="conum" data-value="3"></i><b>(3)</b>
+-t "iescelia/#" <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Utilizamos la imagen Docker <a href="https://hub.docker.com/r/efrecon/mqtt-client">efrecon/mqtt-client</a> que contiene el cliente MQTT (<code>mosquitto_sub</code>) para suscribirse a un topic de un broker MQTT.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Utilizamos el comando <code>sub</code> para suscribirnos a un topic del broker MQTT.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Con el parámetro <code>-h</code> indicamos el hosts (broker MQTT) con el que queremos conectarnos. En este ejemplo estamos utilizando el broker de prueba de <code>test.mosquitto.org</code>, pero <strong>tendremos que cambiar este broker por la dirección IP de nuestro broker MQTT</strong>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Con el parámetro <code>-t</code> indicamos el topic al que vamos a suscribirnos. En este ejemplo, estamos utilizando el topic <code>iescelia/<mark></code>. Con el <em>wildcard</em> <code></mark></code> estamos indicando que queremos suscribirnos a todos los topics que existan dentro de <code>iescelia/</code>, es decir, todos los mensajes que se publiquen en cada una de las aulas. También sería posible suscribirnos al topic específico de un aula, por ejemplo: <code>iescelia/aula21/temperature</code>.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No olvide que en este ejemplo debemos reemplazar el broker de prueba de <code>test.mosquitto.org</code> por la dirección IP de nuestro broker MQTT.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
