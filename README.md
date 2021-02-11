@@ -98,3 +98,68 @@ allow_anonymous true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
     
 # captura 1
+<div class="sect2">
+<h3 id="_cliente_mqtt_para_publicar_en_un_topic_publish">4.3. Cliente MQTT para publicar en un topic (<em>publish</em>)</h3>
+<div class="paragraph">
+<p>En esta sección vamos a explicar cómo podemos hacer uso de un cliente MQTT para publicar mensajes de prueba en el broker MQTT que acabamos de crear.</p>
+</div>
+<div class="paragraph">
+<p>Esta comprobación deberíamos realizarla antes de empezar a trabajar directamente con los sensores sobre el broker MQTT. Una vez que hayamos comprobado que podemos publicar y suscribirnos a los mensajes del broker con este cliente, ya podríamos realizar el siguiente paso para publicar mensajes con los sensores y recibirlos con el agente de <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ejemplo</strong>:</p>
+ <p>Explicación de los parámetros utilizados:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker run --init -it --rm efrecon/mqtt-client \ <i class="conum" data-value="1"></i><b>(1)</b>
+pub \ <i class="conum" data-value="2"></i><b>(2)</b>
+-h test.mosquitto.org \ <i class="conum" data-value="3"></i><b>(3)</b>
+-p 1883 \ <i class="conum" data-value="4"></i><b>(4)</b>
+-t "iescelia/aula21/temperature" \ <i class="conum" data-value="5"></i><b>(5)</b>
+-m 30 <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Utilizamos la imagen Docker <a href="https://hub.docker.com/r/efrecon/mqtt-client">efrecon/mqtt-client</a> que contiene el cliente MQTT (<code>mosquitto_pub</code>) para publicar mensajes en un topic de un broker MQTT.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Utilizamos el comando <code>pub</code> para publicar un mensaje en el broker MQTT.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Con el parámetro <code>-h</code> indicamos el hosts (broker MQTT) con el que queremos conectarnos. En este ejemplo estamos utilizando el broker de prueba de <code>test.mosquitto.org</code>, pero <strong>tendremos que cambiar este broker por la dirección IP de nuestro broker MQTT</strong>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Con el parámetro <code>-p</code> indicamos el puerto, que por defecto, será el puerto <code>1883</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Con el parámetro <code>-t</code> indicamos el topic que vamos a utilizar para publicar nuestro mensaje. En este ejemplo, estamos utilizando el topic <code>iescelia/aula21/temperature</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Con el parámetro <code>-m</code> indicamos el contenido del mensaje que queremos publicar. En este ejemplo, estamos publicando el mensaje <code>30</code>.</td>
+</tr>
+</table>
+</div>
+    <div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No olvide que en este ejemplo debemos reemplazar el broker de prueba de <code>test.mosquitto.org</code> por la dirección IP de nuestro broker MQTT.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
