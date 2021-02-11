@@ -96,12 +96,4 @@ allow_anonymous true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 <div class="paragraph">
 <p>En este punto, el contenido de nuestro directorio de trabajo debe tener los siguientes archivos.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>.
-├── docker-compose.yml
-├── mosquitto
-    └── mosquitto.conf</code></pre>
-</div>
-</div>
-</div>
+# captura 1
