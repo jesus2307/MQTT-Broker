@@ -163,6 +163,7 @@ pub \ <i class="conum" data-value="2"></i><b>(2)</b>
 <td class="content">
 <div class="paragraph">
 <p>No olvide que en este ejemplo debemos reemplazar el broker de prueba de <code>test.mosquitto.org</code> por la dirección IP de nuestro broker MQTT.</p>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/ciente%20mqtt.PNG" alt="mg">
 </div>
 </td>
 </tr>
