@@ -235,6 +235,7 @@ sub \ <i class="conum" data-value="2"></i><b>(2)</b>
 </div>
 </div>
 <div class="sect1">
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/comprabacion%20de%20conexion.PNG" alt="compo">
 <h2 id="_telegraf">5. Telegraf</h2>
 <div class="sectionbody">
 <div class="paragraph">
