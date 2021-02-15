@@ -1118,7 +1118,7 @@ datasources:
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/grafana.png" alt="grafana">
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/resultado%20graficas.PNG" alt="grafana">
 </div>
 </div>
 </div>
