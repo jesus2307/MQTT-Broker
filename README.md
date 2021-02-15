@@ -335,6 +335,7 @@ sub \ <i class="conum" data-value="2"></i><b>(2)</b>
 </div>
 <div class="sect3">
 <h4 id="_data_format">5.3.3. <code>data_format</code></h4>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/datafromats.PNG" alt="data">
 <div class="paragraph">
 <p>En esta directiva indicamos cómo es el formato de los datos que vamos a recibir por MQTT.</p>
 </div>
