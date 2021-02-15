@@ -301,6 +301,7 @@ sub \ <i class="conum" data-value="2"></i><b>(2)</b>
 </div>
 </div>
 <div class="sect2">
+    
 <h3 id="_configuración_del_archivo_telegraf_conf_para_suscribirnos_a_un_topic_mqtt_inputs_mqtt_consumer">5.3. Configuración del archivo <code>telegraf.conf</code> para suscribirnos a un topic MQTT (<code>inputs.mqtt_consumer</code>)</h3>
 <div class="paragraph">
 <p>Tendremos que buscar la sección <code>inputs.mqtt_consumer</code> dentro del archivo <code>telegraf.conf</code> y configurar los siguientes valores:</p>
@@ -323,12 +324,14 @@ sub \ <i class="conum" data-value="2"></i><b>(2)</b>
 </div>
 <div class="sect3">
 <h4 id="_servers">5.3.1. <code>servers</code></h4>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/imputs.PNG" alt="ser">  
 <div class="paragraph">
 <p>En esta directiva de configuración indicamos la URL del broker MQTT al que queremos conectarnos. En nuestro caso pondremos el nombre del servicio <code>mosquitto</code> que es como lo hemos definido en nuestro archivo <code>docker-compose.yml</code>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_topics">5.3.2. <code>topics</code></h4>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/imputs.PNG" alt="top">   
 <div class="paragraph">
 <p>En esta directiva indicamos los topics a los que queremos suscribirnos. En nuestro caso pondremos el topic <code>iescelia/#</code>. El carácter <code>#</code> al final del topic indica que nos vamos a suscribir a cualquier topic que exista después de la cadena <code>iescelia/</code>.</p>
 </div>
@@ -621,6 +624,7 @@ se reciben son parseados automáticamente a métricas de Telegraf.</p>
 </div>
 <div class="sect2">
 <h3 id="_configuración_del_archivo_telegraf_conf_para_almacenar_los_datos_en_influxdb_outputs_influxdb">5.6. Configuración del archivo <code>telegraf.conf</code> para almacenar los datos en InfluxDB (<code>outputs.influxdb</code>)</h3>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/influxdb.PNG" alt="diagram">
 <div class="paragraph">
 <p>Tendremos que buscar la sección <code>outputs.influxdb</code> dentro del archivo
 <code>telegraf.conf</code> y configurar los siguientes valores:</p>
