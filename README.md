@@ -1010,6 +1010,7 @@ time                host         topic                       value
 </ol>
 </div>
 <div class="paragraph">
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/comprobacion%20de%20grafana.PNG" alt="com">
 <p>En la documentación oficial puede encontrar más información sobre <a href="https://grafana.com/docs/grafana/latest/datasources/influxdb/#using-influxdb-in-grafana">cómo utilizar InfluxDB con Grafana</a>.</p>
 </div>
 </div>
