@@ -973,12 +973,12 @@ time                host         topic                       value
 <div class="sect2">
 <h3 id="_configuración_de_un_data_source">7.2. Configuración de un <em>data source</em></h3>
 <div class="paragraph">
-    
-<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/grafana.PNG" alt="grf">
+
 <p>Grafana permite utilizar diferentes <em>data sources</em>, en nuestro proyecto utilizaremos InfluxDB pero también es posible utilizar AWS CloudWatch, Elasticsearch, MySQL o PostgreSQl entre otros.</p>
 </div>
 <div class="sect3">
 <h4 id="_configuración_de_forma_manual">7.2.1. Configuración de forma manual</h4>
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/grafana.PNG" alt="grf">
 <div class="paragraph">
 <p>Antes de crear un <em>dashboard</em> es necesario crear un <em>data source</em>. Sólo los usuarios que tengan rol de administrador podrán crear un <em>data source</em>.</p>
 </div>
