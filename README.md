@@ -97,7 +97,7 @@ allow_anonymous true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 <p>En este punto, el contenido de nuestro directorio de trabajo debe tener los siguientes archivos.</p>
 </div>
     
-# captura 1
+<img src="https://github.com/jesus2307/iaw-practica-18/blob/main/practica18/1.PNG" alt="ima">
 <div class="sect2">
 <h3 id="_cliente_mqtt_para_publicar_en_un_topic_publish">4.3. Cliente MQTT para publicar en un topic (<em>publish</em>)</h3>
 <div class="paragraph">
